@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/selectionFragment">
+
+    <fragment
+        android:id="@+id/selectionFragment"
+        android:name="com.example.myapplication.SelectionFragment"
+        tools:layout="@layout/fragment_selection">
+        <action
+            android:id="@+id/action_selectionFragment_to_singlePlayerFragment"
+            app:destination="@id/singlePlayerFragment" />
+        <action
+            android:id="@+id/action_selectionFragment_to_multiPlayerFragment"
+            app:destination="@id/multiPlayerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/singlePlayerFragment"
+        android:name="com.example.myapplication.SinglePlayerFragment"
+        tools:layout="@layout/fragment_single_player" />
+
+    <fragment
+        android:id="@+id/multiPlayerFragment"
+        android:name="com.example.myapplication.MultiPlayerFragment"
+        tools:layout="@layout/fragment_multi_player" />
+</navigation>
